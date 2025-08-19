@@ -18,7 +18,7 @@ Instalando e configurando typescript
 - npx tsc --init: cria o tsconfig.json
 - https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping: aqui encontramos config. bases que precisam ser feitas de forma manual
 
-Express
+Express 
 ---
 1. framework flexivel e minimalista para o Node. Lida com requisições e respostas. Entrega muitos recursos prontos.
 2. instalando e configurando o express:
@@ -27,3 +27,8 @@ Express
 - precisa ser importado no arquivo principal
 - precisa instalar a tipagem do express: 
   - npm i --save-dev @types/express
+
+CRIANDO A API REST
+---
+1. inicializando o express e colocando dentro da constante app todos os recursos que vamos ter disponiveis
+2. criando uma constante para a porta (PORT)
