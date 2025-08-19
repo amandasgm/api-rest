@@ -16,6 +16,7 @@
   "description": "Criando uma API REST com node.js",
   "devDependencies": {
     "@types/node": "^20.14.12",
+    "tsx": "^4.20.4",
     "typescript": "^5.5.4"
   }
 }
