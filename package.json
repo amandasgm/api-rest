@@ -20,5 +20,8 @@
     "@types/node": "^20.14.12",
     "tsx": "^4.20.4",
     "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
   }
 }
