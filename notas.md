@@ -23,3 +23,7 @@ Express
 1. framework flexivel e minimalista para o Node. Lida com requisições e respostas. Entrega muitos recursos prontos.
 2. instalando e configurando o express:
 - npm i express
+- usando para desenvolvimento e produçāo
+- precisa ser importado no arquivo principal
+- precisa instalar a tipagem do express: 
+  - npm i --save-dev @types/express
