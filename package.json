@@ -2,7 +2,9 @@
   "name": "api-rest",
   "version": "1.0.0",
   "main": "server.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "tsx --watch src/server.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/amandasgm/api-rest.git"
