@@ -21,7 +21,9 @@ app.get("/products", (request, response) => {
 // 3. fazendo uma requisição POST
 app.post("/products", (request, response) => {
   const { name, price } = request.body
-  response.send(`Produto ${name} custa $${price}`)
+  // response.send(`Produto ${name} custa $${price}`)
+  // 4. devolvendo a resposta no formato JSON:
+  response.status(201).json({ name, price })
 })
 
 
