@@ -35,4 +35,6 @@ CRIANDO A API REST
 1. importando o express
 2. inicializando o express e colocando dentro da constante app todos os recursos que vamos ter disponiveis
 - fazendo a requisição GET - recuperando parametros nomeados (params)
-3. recuperando parametros não nomeados(query params)
+- recuperando parametros não nomeados(query params)
+3. fazendo uma requisição POST
+3.1 entre XML e JSON, definimos o json como leitor de dados
