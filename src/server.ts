@@ -1,6 +1,7 @@
 // 1. importando o express
 import express, { response } from "express"
 import { request } from "http"
+import { myMiddleware } from "./middlewares/my-middleware"
 
 // definindo uma constante para a porta
 const PORT = 3333
@@ -11,8 +12,10 @@ const app = express()
 // 3.1 deixando claro que vamos utilizar o json para representar dados
 app.use(express.json())
 
+// 8. usando o middleware para todas as rotas
+app.use(myMiddleware)
 
-// ! fazendo uma requisição get
+// fazendo uma requisição get
 app.get("/products", (request, response) => {
   const { page, limit } = request.query
   response.send(`Pagina ${page} de ${limit}`)
