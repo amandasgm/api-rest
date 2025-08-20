@@ -28,9 +28,11 @@ Express
 - precisa instalar a tipagem do express: 
   - npm i --save-dev @types/express
 
+
+
 CRIANDO A API REST
 ---
-
 1. importando o express
 2. inicializando o express e colocando dentro da constante app todos os recursos que vamos ter disponiveis
-- fazendo a requisição GET
+- fazendo a requisição GET - recuperando parametros nomeados (params)
+3. recuperando parametros não nomeados(query params)

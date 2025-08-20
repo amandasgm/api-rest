@@ -9,9 +9,10 @@ const PORT = 3333
 const app = express()
 
 // fazendo uma requisição get
-app.get("/products/:id", (request, response) => {
-  const { id } = request.params
-  response.send(`Produto ${id}`)
+app.get("/products", (request, response) => {
+  const { page, limit } = request.query
+
+  response.send(`Pagina ${page} de ${limit}`)
 })
 
 
