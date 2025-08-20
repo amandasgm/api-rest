@@ -30,5 +30,7 @@ Express
 
 CRIANDO A API REST
 ---
-1. inicializando o express e colocando dentro da constante app todos os recursos que vamos ter disponiveis
-2. criando uma constante para a porta (PORT)
+
+1. importando o express
+2. inicializando o express e colocando dentro da constante app todos os recursos que vamos ter disponiveis
+- fazendo a requisição GET
