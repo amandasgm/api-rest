@@ -60,3 +60,13 @@ CRIANDO A API REST
 12. dentro de um projeto pode ter confitos com nomes iguais, uma forma de prever isso é usando o declare namespace
 
 13. adicionando a nova propriedade
+
+14. criando arquivos para separar rotas
+
+15. objetivo de juntas todas as rotas em um unico index.
+- para quando o projeto começar a crescer e tivermos que adicionar a nova rota sempre diretamente ao server
+- dessa forma deixamos o server com o index e adicionando de forma manual no index
+- routes.use("/users", productsRoutes)
+  routes.use("/clients", productsRoutes)
+** opcoes de rotas futuras
+
