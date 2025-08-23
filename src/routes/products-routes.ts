@@ -1,9 +1,10 @@
 // 14. criando arquivos para separar rotas
-
 import { Router } from "express";
 import { myMiddleware } from "../middlewares/my-middleware";
+
 // 17. importando o controller
 import { ProductsController } from "../controllers/ProductsController";
+
 
 export const productsRoutes = Router()
 // 17.1 instanciando o controller

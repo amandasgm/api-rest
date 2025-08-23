@@ -90,4 +90,14 @@ OBS: const { page, limit } = request.query
 
 18. tratando exceções, precisa estar no final de toda execução
 
+19. tipos de erros:
+- 400 (Bad Request): erro do cliente - algum valor errado que o cliente digitou e etc
+- 500 (Internal Server Error): Erro interno do servidor 
+
+20. importando o erro para cada tipo de requisição
+
+21. deixando mais dinamico o tratamento do erro
+
+
+
 
