@@ -5,7 +5,7 @@ import { myMiddleware } from "../middlewares/my-middleware";
 // 17. importando o controller
 import { ProductsController } from "../controllers/ProductsController";
 
-const productsRoutes = Router()
+export const productsRoutes = Router()
 // 17.1 instanciando o controller
 const productsController = new ProductsController()
 
@@ -17,4 +17,3 @@ productsRoutes.get("/", productsController.index)
 // nesse caso create
 productsRoutes.post("/", myMiddleware, productsController.create)
 
-export { productsRoutes }

@@ -86,5 +86,8 @@ OBS: const { page, limit } = request.query
 - request.query: **Representa parâmetros da URL**
 - request.body: **Representa o corpo da requisição**. Só existe em métodos como POST, PUT, PATCH (normalmente).
 
+17. importando controllers e passando metodos respectivos para cada requisição
+
+18. tratando exceções, precisa estar no final de toda execução
 
 
