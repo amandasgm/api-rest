@@ -50,3 +50,5 @@ CRIANDO A API REST
 7. next, usado para passar para a proxima requisicao
 
 8. usando o middleware global, em todas as requisições - precisa estar acima de todas as requisições no codigo para que seja global
+
+9. middlerware de forma local em uma rota especifica

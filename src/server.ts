@@ -22,7 +22,8 @@ app.get("/products", (request, response) => {
 })
 
 // 3. fazendo uma requisição POST
-app.post("/products", (request, response) => {
+// 9. utilizando o middlerware de forma local
+app.post("/products", myMiddleware, (request, response) => {
   const { name, price } = request.body
   // response.send(`Produto ${name} custa $${price}`)
   // 4. devolvendo a resposta no formato JSON:
