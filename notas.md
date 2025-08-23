@@ -52,3 +52,11 @@ CRIANDO A API REST
 8. usando o middleware global, em todas as requisições - precisa estar acima de todas as requisições no codigo para que seja global
 
 9. middlerware de forma local em uma rota especifica
+
+10. modificando conteudo da requisicao, tipo propriedade
+
+11. criando uma pasta para deixar tipos salvos(request.d.ts)
+
+12. dentro de um projeto pode ter confitos com nomes iguais, uma forma de prever isso é usando o declare namespace
+
+13. adicionando a nova propriedade

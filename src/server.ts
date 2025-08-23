@@ -25,9 +25,10 @@ app.get("/products", (request, response) => {
 // 9. utilizando o middlerware de forma local
 app.post("/products", myMiddleware, (request, response) => {
   const { name, price } = request.body
-  // response.send(`Produto ${name} custa $${price}`)
+
   // 4. devolvendo a resposta no formato JSON:
-  response.status(201).json({ name, price })
+  // 13. adicionando o user_id com tipagem
+  response.status(201).json({ name, price, user_id: request.user_id })
 })
 
 
