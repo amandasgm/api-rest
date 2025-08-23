@@ -1,26 +1,20 @@
-// 14. 
+// 14. criando arquivos para separar rotas
 
 import { Router } from "express";
 import { myMiddleware } from "../middlewares/my-middleware";
+// 17. importando o controller
+import { ProductsController } from "../controllers/ProductsController";
 
 const productsRoutes = Router()
+// 17.1 instanciando o controller
+const productsController = new ProductsController()
 
 // ! get
-productsRoutes.get("/:id", (request, response) => {
-  const { page, limit } = request.query
-  const { id } = request.params
-  response.send(`Metodo GET sendo feito! Página ${page} de ${limit} - ID: ${id}`)
-})
+// 17.2 importando o controller e passando o metodo respectivo para a requisição - nesse caso index
+productsRoutes.get("/", productsController.index)
 
 // ! post
-// 3. fazendo uma requisição POST
-// 9. utilizando o middlerware de forma local
-productsRoutes.post("/", myMiddleware, (request, response) => {
-  const { name, price } = request.body
-
-  // 4. devolvendo a resposta no formato JSON:
-  // 13. adicionando o user_id com tipagem
-  response.status(201).json({ name, price, user_id: request.user_id })
-})
+// nesse caso create
+productsRoutes.post("/", myMiddleware, productsController.create)
 
 export { productsRoutes }

@@ -70,3 +70,21 @@ CRIANDO A API REST
   routes.use("/clients", productsRoutes)
 ** opcoes de rotas futuras
 
+16. separando controllers
+- nome do arquivo ProductsController com P maiusculo pq 
+- padronizando controllers para manutenção e entendimento
+- maximo de 5 metodos
+
+* index - GET para listar varios registros
+* show - GET para exibir um registro especifico
+* create - POST para criar um registro
+* update - PUT para atualizar um registro
+* remove - DELETE para deletar um registro
+** se vc acha que precisa de mais registros, isso é um sinal de que vale a pena criar outro controller
+
+OBS: const { page, limit } = request.query
+- request.query: **Representa parâmetros da URL**
+- request.body: **Representa o corpo da requisição**. Só existe em métodos como POST, PUT, PATCH (normalmente).
+
+
+
