@@ -113,4 +113,6 @@ ZOD
 
 26. criando regras com o zod: https://zod.dev/error-customization
 
+27. tirando a pasta node_modules do projeto para subir no github. Se quiser apagar ela e depois reinstalar: npm i
+
 
