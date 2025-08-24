@@ -9,8 +9,7 @@ export class ProductsController{
   index(request: Request, response: Response){
     const { page, limit } = request.query
 
-    throw new AppError("Erro ao tentar reciperar um produto")
-
+    // throw new AppError("Erro ao tentar reciperar um produto")
 
     response.send(`Metodo GET sendo feito! Página ${page} de ${limit}`)
   }
@@ -19,10 +18,18 @@ export class ProductsController{
   create(request: Request, response: Response){
     const { name, price } = request.body
 
-    // throw new Error("Erro ao tentar criar um produto")
+    // 22. tratando erros como "campos obrigatorios"
+    if(!name){
+      throw new AppError("Nome do produto é obrigatório", 401)
+    }
+    if(!price){
+      throw new AppError("Preço do produto é obrigatório", 401)
+    }
 
+    // throw new Error("Erro ao tentar criar um produto")
+    
     // 20. passando o AppError como erro
-    throw new AppError("Erro ao tentar criar um produto")
+    // throw new AppError("Erro ao tentar criar um produto")
 
     response.status(201).json({ name, price, user_id: request.user_id })
   }

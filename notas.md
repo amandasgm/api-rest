@@ -98,6 +98,7 @@ OBS: const { page, limit } = request.query
 
 21. deixando mais dinamico o tratamento do erro
 
+22. trazendo mensagens personalizadas para cada erro, tratando exeções como campos nao preenchidos e etc
 
 
 
