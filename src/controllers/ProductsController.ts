@@ -19,17 +19,21 @@ export class ProductsController{
     const { name, price } = request.body
 
     // 22. tratando erros como "campos obrigatorios"
+    // ! exeções de name
     if(!name){
       throw new AppError("Nome do produto é obrigatório", 401)
     }
+    if(name.trim().length < 6){
+      throw new AppError("Nome do produto precisa ter no minimo 6 caracters")
+    }
+
+    // ! exeções de price
     if(!price){
       throw new AppError("Preço do produto é obrigatório", 401)
     }
-
-    // throw new Error("Erro ao tentar criar um produto")
-    
-    // 20. passando o AppError como erro
-    // throw new AppError("Erro ao tentar criar um produto")
+    if(price < 0){
+      throw new AppError("Preço do produto não pode ser negativo", 401)
+    }
 
     response.status(201).json({ name, price, user_id: request.user_id })
   }
