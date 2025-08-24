@@ -3,7 +3,7 @@ import { Router } from "express";
 import { myMiddleware } from "../middlewares/my-middleware";
 
 // 17. importando o controller
-import { ProductsController } from "../controllers/ProductsController";
+import { ProductsController } from "../controllers/products-controller";
 
 
 export const productsRoutes = Router()

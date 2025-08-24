@@ -2,7 +2,7 @@
 import { Request, Response } from "express";
 
 // 20. importando o diferenciador de erros
-import { AppError } from "../utils/AppError";
+import { AppError } from "../utils/app-error";
 
 export class ProductsController{
   // ! get

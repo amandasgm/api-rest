@@ -3,7 +3,7 @@ import express, { NextFunction, Response, Request } from "express"
 import { routes } from "./routes"
 
 // 21. deixando mais dinamico o tratamento do erro
-import { AppError } from "./utils/AppError"
+import { AppError } from "./utils/app-error"
 
 const PORT = 3333
 
