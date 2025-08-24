@@ -106,5 +106,7 @@ ZOD
 
 24. utilizando o zod: torna mais simple as validações
 24.1 criando uma constante para o zod e passando os parametros e tipos do body que serão acessados pelo zod
+24.2 levando a exceção do zod para o server
+24.3 validade tipo de dado
 
 
