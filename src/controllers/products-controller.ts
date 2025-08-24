@@ -20,8 +20,12 @@ export class ProductsController{
 
     // 24.1 criando uma constante para o schema validation
     const bodySchema = z.object({ 
-      name: z.string(), 
-      price:z.number().nullish() // 25. campo pode ser opcional
+      name: z.string({
+        required_error: "Name is required"
+      }), 
+      price:z.number({ 
+        required_error: "Price is required"
+      })
     })
 
     const { name, price } = bodySchema.parse(request.body)
