@@ -104,5 +104,7 @@ ZOD
 ---
 23. instalando o zod para fazer schema validation
 
+24. utilizando o zod: torna mais simple as validações
+24.1 criando uma constante para o zod e passando os parametros e tipos do body que serão acessados pelo zod
 
 
