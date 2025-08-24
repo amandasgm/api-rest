@@ -109,4 +109,6 @@ ZOD
 24.2 levando a exceção do zod para o server
 24.3 validade tipo de dado
 
+25. quando o campo PODE SER nulo(null) ou seja, opcional - usamos nullish()
+
 

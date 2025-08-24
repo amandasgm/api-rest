@@ -17,11 +17,11 @@ export class ProductsController{
 
   // ! post
   create(request: Request, response: Response){
-    
+
     // 24.1 criando uma constante para o schema validation
     const bodySchema = z.object({ 
       name: z.string(), 
-      price:z.number()
+      price:z.number().nullish() // 25. campo pode ser opcional
     })
 
     const { name, price } = bodySchema.parse(request.body)
