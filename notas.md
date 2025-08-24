@@ -111,4 +111,6 @@ ZOD
 
 25. quando o campo PODE SER nulo(null) ou seja, opcional - usamos nullish()
 
+26. criando regras com o zod: https://zod.dev/error-customization
+
 

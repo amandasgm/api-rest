@@ -20,33 +20,18 @@ export class ProductsController{
 
     // 24.1 criando uma constante para o schema validation
     const bodySchema = z.object({ 
-      name: z.string({
-        required_error: "Name is required"
-      }), 
-      price:z.number({ 
-        required_error: "Price is required"
-      })
+      // 26. criando regras de validação com o zod
+      name: z
+        .string({required_error: "Name is required"})
+        .trim()
+        .min(5, "Too short"), 
+      price: z
+        .number({ required_error: "Price is required" })
+        .positive("Price must be greater then 0")
+        .gte(100, "Maior ou igual a 100")
     })
 
     const { name, price } = bodySchema.parse(request.body)
-
-
-    // // 22. tratando erros como "campos obrigatorios"
-    // // ! exeções de name
-    // if(!name){
-    //   throw new AppError("Nome do produto é obrigatório", 401)
-    // }
-    // if(name.trim().length < 6){
-    //   throw new AppError("Nome do produto precisa ter no minimo 6 caracters")
-    // }
-
-    // // ! exeções de price
-    // if(!price){
-    //   throw new AppError("Preço do produto é obrigatório", 401)
-    // }
-    // if(price < 0){
-    //   throw new AppError("Preço do produto não pode ser negativo", 401)
-    // }
 
     response.status(201).json({ name, price, user_id: request.user_id })
   }
